@@ -114,13 +114,16 @@ header .header-title {
 .recadrage {
     display: flex;
     height: 360px;
+
+    margin-bottom: 200px;
 }
 
 .recadrage-left {
     display: flex;
     flex: 1;
-
-    background: lightcoral;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 40px;
 }
 
 .recadrage-center {
@@ -128,15 +131,29 @@ header .header-title {
     flex: 1;
     flex-direction: column;
     justify-content: center;
-
-    background: lightgreen;
 }
 
 .recadrage-right {
     display: flex;
     flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 40px;
+}
 
-    background: lightblue;
+.recadrage-frame {
+    width: 67%;
+    height: 200px;
+    margin-top: -180px;
+    border: 8px solid white;
+    margin-left: auto;
+    margin-right: 25px;
+
+    z-index: -1;
+}
+
+.recadrage-center p {
+    margin-left: 160px;
 }
 
 p {
@@ -177,13 +194,13 @@ h6 {
 }
 
 .right {
-    justify-content: flex-end;
+    align-self: flex-end;
 }
 
 .left {
-    justify-content: flex-start;
+    align-self: flex-start;
 }
 
 .center {
-    justify-content: center;
+    align-self: center;
 }
