@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1a1a1a;
+      }
+    </style>
+  </defs>
+  <title>menu-button</title>
+  <g id="Frame">
+    <g>
+      <rect class="cls-1" x="28" y="28.5" width="24" height="3" transform="translate(80 60) rotate(180)"/>
+      <rect class="cls-1" x="28" y="37.5" width="24" height="3" transform="translate(80 78) rotate(180)"/>
+      <rect class="cls-1" x="28" y="46.5" width="24" height="3" transform="translate(80 96) rotate(180)"/>
+    </g>
+  </g>
+</svg>
