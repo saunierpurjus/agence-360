@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.12" height="17.12" viewBox="0 0 17.12 17.12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 2.23px;
+      }
+    </style>
+  </defs>
+  <title>arrow_45</title>
+  <g id="Calque_1" data-name="Calque 1">
+    <polyline class="cls-1" points="16 0 16 16 0 16"/>
+  </g>
+</svg>
