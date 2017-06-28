@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>icon_facebook</title>
+  <g id="Calque_1" data-name="Calque 1">
+    <path id="facebook-4" class="cls-1" d="M18,0A18,18,0,1,0,36,18,18,18,0,0,0,18,0Zm4.5,12h-2c-.81,0-1,.33-1,1.17V15h3l-.31,3H19.5V28.5H15V18H12V15h3V11.54c0-2.65,1.4-4,4.54-4h3Z"/>
+  </g>
+</svg>

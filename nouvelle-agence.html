@@ -6,6 +6,20 @@
     <link rel="stylesheet" href="./build/new_agency.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=no"/>
+
+    <!-- ScrollTo -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+                var page = $(this).attr('href'); // Page cible
+                var speed = 750; // Durée de l'animation (en ms)
+                $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                return false;
+            });
+        });
+    </script>
+
 </head>
 <body>
 
@@ -17,8 +31,8 @@
             <img src="./asset/images/nav-button.svg">
         </div></a>
 
-        <a class="button-purjus-recrute" href="#">Purjus recrute !</a>
-        <a class="button-purjus-site" href="http://purjus.fr">www.purjus.fr</a>
+        <a class="button-purjus-recrute js-scrollTo" href="#recrutement">Purjus recrute !</a>
+        <a class="button-purjus-site" href="http://purjus.fr" target="_blank">www.purjus.fr</a>
 
         <div class="frame-top"></div>
         <div class="frame-bottom"></div>
@@ -30,17 +44,19 @@
         <img class="header-logo" src="./asset/images/purjus_logo.svg">
         <img class="header-title" src="./asset/images/titre_nouvelle_agence.svg">
     </header>
-    <div class="header-arrow">
-        <img src="./asset/images/arrow_45.svg">
-    </div>
+    <a href="#intro" class="js-scrollTo">
+        <div class="header-arrow">
+            <img src="./asset/images/arrow_45.svg">
+        </div>
+    </a>
 
     <div class="container">
-        <div class="intro">
+        <div class="intro" id="intro">
             <p>Depuis 10 ans Purjus n’a cessé de se renouveler. Le temps est maintenant à l’agrandissement de nos espaces et de notre équipe pour prendre toujours plus de plaisir dans ce que nous faisons.</p>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" data-sr="enter from the top over 0.5s">
         <div class="travaux">
 
             <img src="./asset/images/timeline.svg">
@@ -68,26 +84,33 @@
 
                 <h3>Fin des travaux dans</h3>
 
-                <div class="travaux-countdown">
-                    <div>
-                        <h1>12</h1>
+                <div class="travaux-countdown" id="clockdiv">
+                    <div class="counter">
+                        <h1 class="days"></h1>
                         <h6>jours</h6>
+                        <div class="data-circle"></div>
                     </div>
-                    <div>
-                        <h1>24</h1>
+                    <div class="counter">
+                        <h1 class="hours"></h1>
                         <h6>heures</h6>
+                        <div class="data-circle"></div>
                     </div>
-                    <div>
-                        <h1>60</h1>
+                    <div class="counter">
+                        <h1 class="minutes"></h1>
                         <h6>minutes</h6>
+                        <div class="data-circle"></div>
                     </div>
-                    <div>
-                        <h1>60</h1>
+                    <div class="counter">
+                        <h1 class="seconds"></h1>
                         <h6>secondes</h6>
+                        <div class="data-circle"></div>
                     </div>
                 </div>
 
+                <script src="src/countdown.js"></script>
+
                 <img src="./asset/images/illustration-timer.png" height="334" width="638">
+
 
             </div>
 
@@ -97,9 +120,9 @@
     <div class="container">
         <div class="recadrage">
             <div class="recadrage-left">
-                <img class="right" src="./asset/images/icon-plant.svg">
-                <img class="left" src="./asset/images/icon-chicken.svg">
-                <img class="center" src="./asset/images/icon-laptop.svg">
+                <img class="right sr-icons" src="./asset/images/icon-plant.svg">
+                <img class="left sr-icons" src="./asset/images/icon-chicken.svg">
+                <img class="center sr-icons" src="./asset/images/icon-laptop.svg">
             </div>
             <div class="recadrage-center">
                 <h1>recadrage</h1>
@@ -107,15 +130,127 @@
                 <div class="recadrage-frame"></div>
             </div>
             <div class="recadrage-right">
-                <img class="center" src="./asset/images/icon-coffe.svg">
-                <img class="right" src="./asset/images/icon-duck.svg">
-                <img class="left" src="./asset/images/icon-cat.svg">
+                <img class="center sr-icons" src="./asset/images/icon-coffe.svg">
+                <img class="right sr-icons" src="./asset/images/icon-duck.svg">
+                <img class="left sr-icons" src="./asset/images/icon-cat.svg">
             </div>
-
         </div>
 
+        <div class="container-row">
+            <div class="container-left">
+                <h2 class="titre-nature">Nature</h2>
+                <img class="img_nature1 sr-imageleft" src="./asset/images/nature1-pinterest.jpg">
+                <img class="img_nature3 sr-imagebottom" src="./asset/images/nature3-agence.jpg">
+            </div>
+            <div class="container-right">
+                <p class="lettrine">La végétation qui nous entoure nous offre un cadre de travail exceptionnel. Elle s’invite chez nous à travers le bois et les plantes.</p>
+                <img class="img_nature2 shadow sr-imageright" src="./asset/images/nature2-pinterest.jpg">
+            </div>
+        </div>
 
+        <div class="container-row">
+            <div class="container-left">
+                <img class="img_art1 left sr-imageleft" src="./asset/images/art1-pinterest.jpg">
+                <img class="img_art2 shadow sr-imagebottom" src="./asset/images/art2-pinterest.jpg">
+                <p class="lettrine">Nous voulons stimuler notre créativité grâce à l’art, par des œuvres qui nous ressemblent etnous inspirent au quotidien.</p>
+            </div>
+            <div class="container-right">
+                <h2 class="titre-art">Art</h2>
+                <img class="img_art3 sr-imageright" src="./asset/images/art3-pinterest.jpg">
+            </div>
+        </div>
+
+        <div class="container-row">
+            <div class="container-left">
+                <h2 class="titre-convivialite">Convi—<br/>vialité</h2>
+                <img class="img_convivialite1 sr-imageleft" src="./asset/images/convivialite1-pinterest.jpg">
+            </div>
+            <div class="container-right">
+                <img class="img_convivialite2 shadow sr-imagetop" src="./asset/images/convivialite2-pinterest.jpg">
+                <img class="img_convivialite3 right sr-imageright" src="./asset/images/convivialite3-agence.jpg">
+                <p class="lettrine">Véritable lieu de vie, l’agence se veut un espace d’échanges agréable entre ses talents et sesclients où il fait bon de travailler et se détendre.</p>
+            </div>
+        </div>
     </div>
+
+    <div class="container-white">
+        <div class="container center">
+            <p><b>Retrouvez nos idées et créations sur Pinterest</b></p>
+            <img class="icon_pinterest" src="./asset/images/pinterest-icon.svg">
+            <a href="http://pinterest.com/agencepurjus" target="_blank">pinterest.com/agencepurjus</a>
+        </div>
+    </div>
+
+    <div class="container-redimension">
+            <h1 class="titre-redimension">redimension</h1>
+        <img class="sr-default" src="./asset/images/illustration-travaux.png">
+        <div class="container">
+            <div class="container-data-redimension">
+                    <div class="data-redimension">
+                        <h1>160</h1>
+                        <h6>mètres²</h6>
+                        <span class="data-circle"></span>
+                    </div>
+                    <div class="data-redimension">
+                        <h1>2</h1>
+                        <h6>Étages</h6>
+                        <span class="data-circle"></span>
+                    </div>
+                    <div class="data-redimension">
+                        <h1>1</h1>
+                        <h6>Piscine</h6>
+                        <span class="data-circle"></span>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="container" id="recrutement">
+        <div class="container-recrutement">
+            <h2 class="on-recrute white">ON RE—<br/>CRUTE</h2>
+            <div class="fiche-recrutement shadow sr-imagetop">
+                <img class="fiche-profile" src="./asset/images/profile1.png">
+                <h5>Dev Web Front-End<br/>
+                VueJS/AngularJR (H/F)</h5>
+                <a href="#"><div class="button-recrutement">
+                    Postuler <img src="./asset/images/arrow-white.svg">
+                </div></a>
+            </div>
+            <div class="fiche-recrutement shadow sr-imagebottom">
+                <img class="fiche-profile" src="./asset/images/profile2.png">
+                <h5>Dev Web Front-End<br/>
+                    VueJS/AngularJR (H/F)</h5>
+                <a href="#"><div class="button-recrutement">
+                    Postuler <img src="./asset/images/arrow-white.svg">
+                </div></a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <img class="header-logo" src="./asset/images/purjus_logo2.svg">
+        <div class="footer_social">
+            <a href="https://www.facebook.com/purjuscommunication/" target="_blank"><img src="./asset/images/icon_facebook.svg"></a>
+            <a href="https://fr.linkedin.com/company/purjus-communication" target="_blank"><img src="./asset/images/icon_linkedin.svg"></a>
+            <a href="https://www.youtube.com/channel/UC-Jw1vHCN2xiTbMgREhkvRg" target="_blank"><img src="./asset/images/icon_youtube.svg"></a>
+        </div>
+    </footer>
+
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <script type="text/javascript">
+        window.sr = ScrollReveal();
+        sr.reveal('.sr-default');
+        sr.reveal('.sr-icons', { origin: 'bottom', delay: 300, duration: 500, reset: true });
+        sr.reveal('.sr-imageright', { origin: 'right', delay: 300, duration: 500, scale: 0, distance: '100%', reset: true });
+        sr.reveal('.sr-imageleft', { origin: 'left', delay: 300, duration: 500, scale: 0, distance: '100%', reset: true });
+        sr.reveal('.sr-imagebottom', { origin: 'bottom', delay: 300, duration: 500, scale: 0, distance: '100%', reset: true });
+        sr.reveal('.sr-imagetop', { origin: 'top', delay: 300, duration: 500, scale: 0, distance: '100%', reset: true });
+    </script>
+
 
 </body>
 </html>

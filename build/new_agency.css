@@ -22,6 +22,8 @@ body {
     top: 0px;
     height: 40px;
     background: white;
+
+    z-index: 20;
 }
 
 .frame-bottom {
@@ -30,6 +32,8 @@ body {
     width: 100%;
     height: 40px;
     background: white;
+
+    z-index: 20;
 }
 
 .frame-left {
@@ -38,6 +42,8 @@ body {
     height: 100%;
     width: 40px;
     background: white;
+
+    z-index: 20;
 }
 
 .frame-right {
@@ -46,6 +52,8 @@ body {
     height: 100%;
     width: 40px;
     background: white;
+
+    z-index: 20;
 }
 
 .button-back {
@@ -56,7 +64,7 @@ body {
     height: auto;
     padding: 30px;
     background-color: white;
-    z-index: 20;
+    z-index: 30;
 }
 
 .button-back img {
@@ -86,7 +94,7 @@ body {
     position: fixed;
     bottom: 30px;
     left: 80px;
-    z-index: 20;
+    z-index: 30;
     font-weight: 700;
 }
 
@@ -94,7 +102,7 @@ body {
     position: fixed;
     bottom: 130px;
     right: -15px;
-    z-index: 20;
+    z-index: 30;
     font-weight: 700;
 
     transform: rotate(270deg);
@@ -107,7 +115,7 @@ body {
     width: 80px;
     height: 80px;
     background-color: white;
-    z-index: 20;
+    z-index: 30;
 }
 
 header {
@@ -204,13 +212,21 @@ header .header-title {
     display: flex;
     width: 80%;
     justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.counter {
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .recadrage {
     display: flex;
     height: 360px;
 
-    margin-bottom: 200px;
+    margin-bottom: 140px;
 }
 
 .recadrage-left {
@@ -251,14 +267,255 @@ header .header-title {
     margin-left: 160px;
 }
 
+.container-row {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+    margin: 20px;
+
+    margin-bottom: 120px;
+}
+
+.container-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    margin: 20px;
+
+    margin-bottom: 120px;
+}
+
+.titre-nature {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: -35px;
+    margin-right: 40px;
+    z-index: 10;
+}
+
+.img_nature1 {
+    width: 50%;
+}
+
+.img_nature2 {
+    width: 50%;
+}
+
+.img_nature3 {
+    margin-right: -20%;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.titre-art {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: -35px;
+    margin-left: 40px;
+    z-index: 10;
+}
+
+.img_art1 {
+    width: 70%;
+}
+
+.img_art2 {
+    margin-top: -30%;
+    width: 45%;
+}
+
+.img_art3 {
+    width: 100%;
+}
+
+.titre-convivialite {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: -35px;
+    margin-right: 40px;
+    z-index: 10;
+}
+
+.img_convivialite1 {
+    width: 100%;
+}
+
+.img_convivialite2 {
+    width: 45%;
+    margin-top: -80px;
+}
+
+.img_convivialite3 {
+    width: 70%;
+    margin-top: -30%;
+}
+
+.container-white {
+    flex: 1;
+    padding: 80px;
+    background: white;
+    margin-bottom: 60px;
+}
+
+.icon_pinterest {
+    margin-top: 20px;
+    margin-bottom: -10px;
+    margin-right: 10px;
+}
+
+.container-redimension {
+    margin-top: 120px;
+}
+
+.titre-redimension {
+    margin-top: 16%;
+    text-align: center;
+
+    width: 100%;
+}
+
+.container-redimension img {
+    width: 100%;
+    margin-top: -16%;
+}
+.container-data-redimension {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 80px;
+
+}
+
+.data-redimension {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data-redimension h2 {
+    margin-bottom: 15px;
+    z-index: 10;
+}
+
+.data-circle {
+    background: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: -80px;
+    z-index: -10;
+}
+
+.container-recrutement {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 120px;
+    padding-top: 180px;
+}
+
+.on-recrute {
+    text-align: right;
+
+    margin: auto;
+}
+
+.fiche-recrutement {
+    width: 28%;
+    height: auto;
+    margin: 20px;
+    background-color: white;
+    text-align: center;
+    align-items: flex-end;
+}
+
+.fiche-profile {
+    margin-top: -80px;
+    border: 10px solid white;
+    border-radius: 50%;
+    width: 120px;
+}
+
+.fiche-recrutement H5 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.button-recrutement {
+    padding: 30px;
+    background: #1A1A1A;
+    color: white;
+    margin-left: auto;
+    width: 50%;
+    line-height: 10px;
+}
+
+.button-recrutement img {
+    margin-left: 10px;
+    display: inline;
+    margin-bottom: -2px;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.button-recrutement:hover img {
+    margin-left: 20px;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+footer {
+    min-width: 100%;
+    min-height: 360px;
+    background-image: url(../asset/images/background_header.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_social img {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
 a {
     color: #1A1A1A;
     text-decoration: none;
 }
 
+b {
+    font-weight: 700;
+}
+
 p {
     font-weight: 400;
     font-size: 1em;
+    line-height: 1.4em;
 }
 
 h1 {
@@ -269,6 +526,7 @@ h1 {
 h2 {
     font-size: 4.5em;
     font-weight: 700;
+    line-height: 1em;
 }
 
 h3 {
@@ -303,4 +561,49 @@ h6 {
 
 .center {
     align-self: center;
+    text-align: center;
 }
+
+.white {
+    color: white;
+}
+
+.shadow {
+    box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.25);
+    z-index: 10;
+}
+
+.rotation {
+    transform: rotate(270deg);
+}
+
+.lettrine:first-of-type:first-letter {
+    font-size: 8.75em;
+    font-weight: 500;
+    float: left;
+    margin-top: -60px;
+    height: 20px;
+    line-height: 0.70em;
+    margin-left: -10px;
+    margin-right: 5px;
+}
+
+.lettrine {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
