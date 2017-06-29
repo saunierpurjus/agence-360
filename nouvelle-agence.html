@@ -20,16 +20,56 @@
         });
     </script>
 
+    <!-- Overlay nav -->
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+                var page = $(this).attr('href'); // Page cible
+                var speed = 750; // Durée de l'animation (en ms)
+                $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                return false;
+            });
+        });
+    </script>
+
 </head>
 <body>
+
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <h2><a href="#intro" class="js-scrollTo" onclick="closeNav()">Intro</a></h2>
+            <h2><a href="#travaux" class="js-scrollTo" onclick="closeNav()">Travaux</a></h2>
+            <h2><a href="#recadrage" class="js-scrollTo" onclick="closeNav()">Recadrage</a></h2>
+            <h2><a href="#redimension" class="js-scrollTo" onclick="closeNav()">Redimention</a></h2>
+            <h2><a href="#recrutement" class="js-scrollTo" onclick="closeNav()">Recrutement</a></h2>
+        </div>
+
+    </div>
 
     <div class="frame">
         <a href="#"><div class="button-back">
             <img src="./asset/images/arrow.svg">Retour
         </div></a>
-        <a href=""><div class="button-nav">
+        <div class="button-nav" onclick="openNav()">
             <img src="./asset/images/nav-button.svg">
-        </div></a>
+        </div>
 
         <a class="button-purjus-recrute js-scrollTo" href="#recrutement">Purjus recrute !</a>
         <a class="button-purjus-site" href="http://purjus.fr" target="_blank">www.purjus.fr</a>
@@ -41,8 +81,8 @@
     </div>
 
     <header>
-        <img class="header-logo" src="./asset/images/purjus_logo.svg">
-        <img class="header-title" src="./asset/images/titre_nouvelle_agence.svg">
+        <img class="header-logo sr-unzoom" src="./asset/images/purjus_logo.svg">
+        <img class="header-title sr-unzoom" src="./asset/images/titre_nouvelle_agence.svg">
     </header>
     <a href="#intro" class="js-scrollTo">
         <div class="header-arrow">
@@ -56,12 +96,12 @@
         </div>
     </div>
 
-    <div class="container" data-sr="enter from the top over 0.5s">
+    <div class="container" id="travaux">
         <div class="travaux">
 
-            <img src="./asset/images/timeline.svg">
-
             <div class="travaux-timeline">
+                <img src="./asset/images/timeline.svg">
+
                 <div class="travaux-date">
                     <h6>Juillet</h6>
                     <h4>Préparation du projet</h4>
@@ -84,7 +124,7 @@
 
                 <h3>Fin des travaux dans</h3>
 
-                <div class="travaux-countdown" id="clockdiv">
+                <div class="travaux-countdown sr-default" id="clockdiv">
                     <div class="counter">
                         <h1 class="days"></h1>
                         <h6>jours</h6>
@@ -109,8 +149,7 @@
 
                 <script src="src/countdown.js"></script>
 
-                <img src="./asset/images/illustration-timer.png" height="334" width="638">
-
+                <img class="img_countdown sr-zoom" src="./asset/images/anim-chantier.gif">
 
             </div>
 
@@ -118,7 +157,7 @@
     </div>
 
     <div class="container">
-        <div class="recadrage">
+        <div class="recadrage" id="recadrage">
             <div class="recadrage-left">
                 <img class="right sr-icons" src="./asset/images/icon-plant.svg">
                 <img class="left sr-icons" src="./asset/images/icon-chicken.svg">
@@ -181,11 +220,11 @@
         </div>
     </div>
 
-    <div class="container-redimension">
+    <div class="container-redimension" id="redimension">
         <h1 class="titre-redimension">redimension</h1>
-        <img class="sr-default" src="./asset/images/illustration-travaux.png">
+        <img class="sr-unzoom" src="./asset/images/illustration-travaux.png">
         <div class="container">
-            <div class="container-data-redimension">
+            <div class="container-data-redimension sr-default">
                     <div class="data-redimension">
                         <h1>160</h1>
                         <h6>mètres²</h6>
@@ -243,11 +282,13 @@
     <script type="text/javascript">
         window.sr = ScrollReveal();
         sr.reveal('.sr-default');
-        sr.reveal('.sr-icons', { origin: 'bottom', delay: 300, duration: 500, reset: true });
+        sr.reveal('.sr-icons', { origin: 'bottom', delay: 300, duration: 500, reset: false });
         sr.reveal('.sr-imageright', { origin: 'right', delay: 300, duration: 500, scale: 0, distance: '50%', reset: true });
         sr.reveal('.sr-imageleft', { origin: 'left', delay: 300, duration: 500, scale: 0, distance: '50%', reset: true });
         sr.reveal('.sr-imagebottom', { origin: 'bottom', delay: 300, duration: 500, scale: 0, distance: '50%', reset: true });
         sr.reveal('.sr-imagetop', { origin: 'top', delay: 300, duration: 500, scale: 0, distance: '50%', reset: true });
+        sr.reveal('.sr-zoom', { origin: 'top', delay: 300, duration: 500, scale: 0.5, distance: '0', reset: false });
+        sr.reveal('.sr-unzoom', { origin: 'top', delay: 300, duration: 500, scale: 1.5, distance: '0', reset: false });
     </script>
 
 

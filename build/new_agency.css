@@ -115,6 +115,24 @@ body {
     height: 80px;
     background-color: white;
     z-index: 30;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.button-nav:hover {
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 header {
@@ -171,7 +189,7 @@ header .header-title {
     margin-right: auto;
     margin-left: auto;
     padding-top: 180px;
-    padding-bottom: 180px;
+    padding-bottom: 60px;
 }
 
 .intro p {
@@ -184,7 +202,8 @@ header .header-title {
     flex-direction: row;
     height: 640px;
 
-    margin-bottom: 200px;
+    padding-top: 120px;
+    margin-bottom: 60px;
 }
 
 .travaux-timeline {
@@ -195,6 +214,14 @@ header .header-title {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.travaux-timeline img {
+    position: absolute;
+}
+
+.travaux-date {
+    margin-left: 60px;
 }
 
 .travaux-timer {
@@ -221,11 +248,16 @@ header .header-title {
     align-items: center;
 }
 
+.img_countdown {
+    width: 65%;
+}
+
 .recadrage {
     display: flex;
     height: 360px;
 
     margin-bottom: 90px;
+    padding-top: 120px;
 }
 
 .recadrage-left {
@@ -365,7 +397,6 @@ header .header-title {
     padding-top: 80px;
     padding-bottom: 80px;
     background: white;
-    margin-bottom: 60px;
 }
 
 .icon_pinterest {
@@ -375,11 +406,11 @@ header .header-title {
 }
 
 .container-redimension {
-    margin-top: 120px;
+    padding-top: 120px;
 }
 
 .titre-redimension {
-    margin-top: 16%;
+    margin-top: 8%;
     text-align: center;
     position: relative;
     z-index: 10;
@@ -506,6 +537,23 @@ footer {
     margin-top: 30px;
     margin-bottom: 20px;
     padding: 15px;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.footer_social img:hover {
+    padding-bottom: 20px;
+    margin-top: -20px;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 a {
@@ -612,9 +660,42 @@ h6 {
 
 @media screen and (max-width: 1141px){
 
+    .travaux {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 120px;
+    }
+
+    .travaux-timeline {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 90px;
+        padding: 0;
+    }
+
+    .travaux-timeline img {
+        display: none;
+    }
+
+    .travaux-date {
+        flex: 1;
+        margin: 20px;
+        min-width: 150px;
+    }
+
+    .travaux-countdown {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .counter {
+        margin-top: 20px;
+        min-width: 140px;
+    }
+
     .recadrage {
         flex-direction: column;
-        height: 520px;
+        height: 580px;
 
         margin-bottom: 60px;
     }
@@ -622,7 +703,7 @@ h6 {
     .recadrage-left {
         flex-direction: row;
         padding-right: 10%;
-        margin-bottom: -10%;
+        margin-bottom: -5%;
     }
 
     .recadrage-center {
@@ -632,7 +713,7 @@ h6 {
     .recadrage-right {
         flex-direction: row;
         padding-left: 10%;
-        margin-top: -10%;
+        margin-top: -5%;
     }
 
     .recadrage-frame {
@@ -650,9 +731,6 @@ h6 {
         margin-left: 0px;
         margin-right: 40px;
     }
-
-
-
 
     .lettrine:first-of-type:first-letter {
         font-size: 4.5em;
@@ -742,6 +820,10 @@ h6 {
 }
 
 @media (max-width: 1140px) and (max-width: 769px){
+
+    .img_countdown {
+        width: 100%;
+    }
 
     .container-row {
         flex-direction: column;
@@ -845,4 +927,92 @@ h6 {
         flex-direction: column-reverse;
     }
 
+}
+
+
+
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 50; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgba(255,255,255,0.85); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.3s; /* 0.3 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    margin-left: 190px;
+    margin-right: 190px;
+    text-align: left;
+    min-width: 480px;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    font-size: 0.8em;
+    text-decoration: none;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+    display: inline;
+}
+
+.overlay a:hover {
+    margin-left: 40px;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 40px;
+    right: 25px;
+    font-size: 3em;
+    text-align: center;
+
+    line-height: 0;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.overlay .closebtn:hover {
+    transform: rotate(90deg);
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-width: 960px), screen and (max-height: 450px){
+    .overlay a {
+        font-size: 0.6em;
+        line-height: 0.6em;
+    }
+    .overlay .closebtn {
+        font-size: 3em;
+        top: 60px;
+        right: 50px;
+    }
+    .overlay-content {
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+    .overlay .line {
+        margin-bottom: 10px;
+    }
 }
