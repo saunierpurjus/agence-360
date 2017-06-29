@@ -6,7 +6,7 @@
 html {
     width: 100%;
     min-height: 320px;
-    min-width: 480px;
+    min-width: 460px;
     background: #DCDCDC;
     color: #1A1A1A;
     font-family: 'Montserrat', sans-serif;
@@ -14,7 +14,6 @@ html {
 
 body {
 }
-
 
 .frame-top {
     position: fixed;
@@ -226,7 +225,7 @@ header .header-title {
     display: flex;
     height: 360px;
 
-    margin-bottom: 140px;
+    margin-bottom: 90px;
 }
 
 .recadrage-left {
@@ -281,7 +280,8 @@ header .header-title {
     flex: 1;
     margin: 20px;
 
-    margin-bottom: 120px;
+    margin-bottom: 60px;
+    margin-top: 60px;
 }
 
 .container-right {
@@ -291,7 +291,8 @@ header .header-title {
     flex: 1;
     margin: 20px;
 
-    margin-bottom: 120px;
+    margin-bottom: 60px;
+    margin-top: 60px;
 }
 
 .titre-nature {
@@ -361,7 +362,8 @@ header .header-title {
 
 .container-white {
     flex: 1;
-    padding: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     background: white;
     margin-bottom: 60px;
 }
@@ -379,6 +381,8 @@ header .header-title {
 .titre-redimension {
     margin-top: 16%;
     text-align: center;
+    position: relative;
+    z-index: 10;
 
     width: 100%;
 }
@@ -387,6 +391,7 @@ header .header-title {
     width: 100%;
     margin-top: -16%;
 }
+
 .container-data-redimension {
     display: flex;
     flex-direction: row;
@@ -394,7 +399,6 @@ header .header-title {
     padding-left: 80px;
     padding-right: 80px;
     margin-top: 80px;
-
 }
 
 .data-redimension {
@@ -402,6 +406,7 @@ header .header-title {
     flex: 1;
     flex-direction: column;
     align-items: center;
+    min-width: 180px;
 }
 
 .data-redimension h2 {
@@ -605,5 +610,239 @@ h6 {
 
 
 
+@media screen and (max-width: 1141px){
+
+    .recadrage {
+        flex-direction: column;
+        height: 520px;
+
+        margin-bottom: 60px;
+    }
+
+    .recadrage-left {
+        flex-direction: row;
+        padding-right: 10%;
+        margin-bottom: -10%;
+    }
+
+    .recadrage-center {
+        text-align: center;
+    }
+
+    .recadrage-right {
+        flex-direction: row;
+        padding-left: 10%;
+        margin-top: -10%;
+    }
+
+    .recadrage-frame {
+        width: 50%;
+        height: 160px;
+        margin-top: -140px;
+        border: 8px solid white;
+        margin-left: auto;
+        margin-right: auto;
+
+        z-index: -1;
+    }
+
+    .recadrage-center p {
+        margin-left: 0px;
+        margin-right: 40px;
+    }
 
 
+
+
+    .lettrine:first-of-type:first-letter {
+        font-size: 4.5em;
+        margin-top: -10px;
+        height: 20px;
+        line-height: 0.70em;
+        margin-left: -4px;
+        margin-right: 3px;
+    }
+
+    .lettrine {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .titre-nature {
+        margin-bottom: -25px;
+        margin-right: -20px;
+    }
+
+    .img_nature1 {
+        width: 80%;
+    }
+
+    .img_nature2 {
+        width: 80%;
+    }
+
+    .img_nature3 {
+        margin-right: -60px;
+        margin-top: 40px;
+        width: 130%;
+    }
+
+    .titre-art {
+        margin-bottom: -25px;
+    }
+
+    .img_art1 {
+        width: 80%;
+    }
+
+    .img_art2 {
+        width: 60%;
+    }
+
+    .img_art3 {
+        width: 120%;
+    }
+
+    .titre-convivialite {
+        margin-bottom: -25px;
+        margin-right: -60px;
+        align-self: flex-start;
+    }
+
+    .img_convivialite1 {
+        width: 120%;
+    }
+
+    .img_convivialite2 {
+        width: 60%;
+    }
+
+    .img_convivialite3 {
+        width: 80%;
+        margin-top: -10%;
+    }
+
+    .container-recrutement {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fiche-recrutement {
+        margin-top: 120px;
+        min-width: 280px;
+    }
+
+    h1 {
+        font-size: 5em;
+    }
+
+    h2 {
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width: 1140px) and (max-width: 769px){
+
+    .container-row {
+        flex-direction: column;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .lettrine:first-of-type:first-letter {
+        margin-top: -15px;
+    }
+
+    .titre-nature {
+        align-self: flex-start;
+    }
+
+    .img_nature1 {
+        width: 60%;
+        margin-right: 10%;
+    }
+
+    .img_nature2 {
+        width: 60%;
+        margin-top: -40px;
+        margin-left: 10%;
+    }
+
+    .img_nature3 {
+        margin-right: 0px;
+        margin-top: -60px;
+        margin-bottom: -120px;
+        width: 100%;
+    }
+
+    .titre-art {
+        margin-bottom: -25px;
+    }
+
+    .img_art1 {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .img_art2 {
+        width: 50%;
+    }
+
+    .img_art3 {
+        width: 100%;
+        margin-bottom: -160px;
+        z-index: -10;
+    }
+
+    .titre-convivialite {
+        margin-right: 10px;
+    }
+
+    .img_convivialite1 {
+        width: 100%;
+        margin-bottom: -80px;
+    }
+
+    .img_convivialite2 {
+        width: 60%;
+        margin-left: 10%;
+    }
+
+    .img_convivialite3 {
+        width: 80%;
+        margin-top: -10%;
+    }
+
+    .container-redimension img {
+        margin-bottom: -12%;
+    }
+
+    .titre-redimension {
+        font-size: 4em;
+    }
+
+    .container-data-redimension {
+        flex-direction: column;
+    }
+
+    .data-redimension {
+        margin-top: 40px;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 3.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+
+}
