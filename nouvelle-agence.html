@@ -7,8 +7,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=no"/>
 
-    <!-- ScrollTo -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- ScrollTo -->
     <script>
         $(document).ready(function() {
             $('.js-scrollTo').on('click', function() { // Au clic sur un élément
@@ -30,8 +31,6 @@
             document.getElementById("myNav").style.width = "0%";
         }
     </script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
             $('.js-scrollTo').on('click', function() { // Au clic sur un élément
@@ -42,6 +41,9 @@
             });
         });
     </script>
+
+    <!-- Numscroll -->
+    <script src="./build/numscroller-1.0.js"></script>
 
 </head>
 <body>
@@ -124,27 +126,28 @@
 
                 <div class="travaux-countdown sr-default" id="clockdiv">
                     <div class="counter">
-                        <h1 class="days"></h1>
+                        <h1 class="days numscroller" data-min="0" data-max="160" data-delay="1" data-increment="1"></h1>
                         <h6>jours</h6>
                         <div class="data-circle"></div>
                     </div>
                     <div class="counter">
-                        <h1 class="hours"></h1>
+                        <h1 class="hours numscroller" data-min="0" data-max="24" data-delay="1" data-increment="1"></h1>
                         <h6>heures</h6>
                         <div class="data-circle"></div>
                     </div>
                     <div class="counter">
-                        <h1 class="minutes"></h1>
+                        <h1 class="minutes numscroller" data-min="0" data-max="60" data-delay="1" data-increment="1"></h1>
                         <h6>minutes</h6>
                         <div class="data-circle"></div>
                     </div>
                     <div class="counter">
-                        <h1 class="seconds"></h1>
+                        <h1 class="seconds numscroller" data-min="0" data-max="60" data-delay="1" data-increment="1"></h1>
                         <h6>secondes</h6>
                         <div class="data-circle"></div>
                     </div>
                 </div>
 
+                <!-- Countdown -->
                 <script src="src/countdown.js"></script>
 
                 <img class="img_countdown sr-zoom" src="./asset/images/anim-chantier.gif">
@@ -224,17 +227,17 @@
         <div class="container">
             <div class="container-data-redimension sr-default">
                     <div class="data-redimension">
-                        <h1>160</h1>
+                        <h1 class="numscroller" data-min="0" data-max="160" data-delay="2" data-increment="1">160</h1>
                         <h6>mètres²</h6>
                         <span class="data-circle"></span>
                     </div>
                     <div class="data-redimension">
-                        <h1>2</h1>
+                        <h1 class="numscroller" data-min="0" data-max="2" data-delay="1" data-increment="1">2</h1>
                         <h6>Étages</h6>
                         <span class="data-circle"></span>
                     </div>
                     <div class="data-redimension">
-                        <h1>1</h1>
+                        <h1 class="numscroller" data-min="0" data-max="1" data-delay="1" data-increment="1">1</h1>
                         <h6>Piscine</h6>
                         <span class="data-circle"></span>
                     </div>

@@ -1003,11 +1003,6 @@ h6 {
         font-size: 0.6em;
         line-height: 0.6em;
     }
-    .overlay .closebtn {
-        font-size: 3em;
-        top: 60px;
-        right: 50px;
-    }
     .overlay-content {
         margin-left: 90px;
         margin-right: 90px;
