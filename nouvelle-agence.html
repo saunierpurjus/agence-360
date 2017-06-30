@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nouvelle Agence</title>
+    <link rel="stylesheet" href="./build/new_agency.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=no"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- ScrollTo -->
+    <script>
+        $(document).ready(function() {
+            $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+                var page = $(this).attr('href'); // Page cible
+                var speed = 750; // Durée de l'animation (en ms)
+                $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                return false;
+            });
+        });
+    </script>
+
+    <!-- Overlay nav -->
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+                var page = $(this).attr('href'); // Page cible
+                var speed = 750; // Durée de l'animation (en ms)
+                $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                return false;
+            });
+        });
+    </script>
+
+    <!-- Numscroll -->
+    <script src="./build/numscroller-1.0.js"></script>
+
+</head>
+<body>
+
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <h2><a href="#intro" class="js-scrollTo" onclick="closeNav()">Intro</a></h2>
+            <h2><a href="#travaux" class="js-scrollTo" onclick="closeNav()">Travaux</a></h2>
+            <h2><a href="#recadrage" class="js-scrollTo" onclick="closeNav()">Recadrage</a></h2>
+            <h2><a href="#redimension" class="js-scrollTo" onclick="closeNav()">Redimension</a></h2>
+            <h2><a href="#recrutement" class="js-scrollTo" onclick="closeNav()">Recrutement</a></h2>
+        </div>
+
+    </div>
+
+    <div class="frame">
+        <a href="index.html"><div class="button-back"><img src="./asset/images/arrow.svg" alt="">Retour</div></a>
+        <div class="button-nav" onclick="openNav()">
+            <img src="./asset/images/nav-button.svg" alt="">
+        </div>
+
+        <a class="button-purjus-recrute js-scrollTo" href="#recrutement">Purjus recrute !</a>
+        <a class="button-purjus-site" href="http://purjus.fr" target="_blank">www.purjus.fr</a>
+
+        <div class="frame-top"></div>
+        <div class="frame-bottom"></div>
+        <div class="frame-left"></div>
+        <div class="frame-right"></div>
+    </div>
+
+    <header>
+        <img class="header-logo sr-unzoom" src="./asset/images/purjus_logo.svg" alt="">
+        <img class="header-title sr-unzoom" src="./asset/images/titre_nouvelle_agence.svg" alt="">
+    </header>
+    <a href="#intro" class="js-scrollTo">
+        <div class="header-arrow">
+            <img src="./asset/images/arrow_45.svg" alt="">
+        </div>
+    </a>
+
+    <div class="container">
+        <div class="intro" id="intro">
+            <p>Depuis 10 ans Purjus n’a cessé de se renouveler. Le temps est maintenant à l’agrandissement de nos espaces et de notre équipe pour prendre toujours plus de plaisir dans ce que nous faisons.</p>
+        </div>
+    </div>
+
+    <div class="container" id="travaux">
+        <div class="travaux">
+
+            <div class="travaux-timeline">
+                <img src="./asset/images/timeline.svg" alt="">
+
+                <div class="travaux-date">
+                    <h6>Juillet</h6>
+                    <h4>Préparation du projet</h4>
+                </div>
+                <div class="travaux-date">
+                    <h6>Août</h6>
+                    <h4>Fermeture annuelle</h4>
+                </div>
+                <div class="travaux-date">
+                    <h6>Octobre</h6>
+                    <h4>Début des travaux</h4>
+                </div>
+                <div class="travaux-date">
+                    <h6>Novembre</h6>
+                    <h4>Fin des travaux</h4>
+                </div>
+            </div>
+
+            <div class="travaux-timer">
+
+                <h3>Fin des travaux dans</h3>
+
+                <div class="travaux-countdown sr-default" id="clockdiv">
+                    <div class="counter">
+                        <h1 class="days numscroller" data-min="0" data-max="160" data-delay="1" data-increment="1"></h1>
+                        <h6>jours</h6>
+                        <div class="data-circle"></div>
+                    </div>
+                    <div class="counter">
+                        <h1 class="hours numscroller" data-min="0" data-max="24" data-delay="1" data-increment="1"></h1>
+                        <h6>heures</h6>
+                        <div class="data-circle"></div>
+                    </div>
+                    <div class="counter">
+                        <h1 class="minutes numscroller" data-min="0" data-max="60" data-delay="1" data-increment="1"></h1>
+                        <h6>minutes</h6>
+                        <div class="data-circle"></div>
+                    </div>
+                    <div class="counter">
+                        <h1 class="seconds numscroller" data-min="0" data-max="60" data-delay="1" data-increment="1"></h1>
+                        <h6>secondes</h6>
+                        <div class="data-circle"></div>
+                    </div>
+                </div>
+
+                <!-- Countdown -->
+                <script src="src/countdown.js"></script>
+
+                <img class="img_countdown sr-zoom" src="./asset/images/anim-chantier.gif" alt="">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="recadrage" id="recadrage">
+            <div class="recadrage-left">
+                <img class="right sr-icons" src="./asset/images/icon-plant.svg" alt="">
+                <img class="left sr-icons" src="./asset/images/icon-chicken.svg" alt="">
+                <img class="center sr-icons" src="./asset/images/icon-laptop.svg" alt="">
+            </div>
+            <div class="recadrage-center">
+                <h1>recadrage</h1>
+                <p>idées et inspiration</p>
+                <div class="recadrage-frame"></div>
+            </div>
+            <div class="recadrage-right">
+                <img class="center sr-icons" src="./asset/images/icon-coffe.svg" alt="">
+                <img class="right sr-icons" src="./asset/images/icon-duck.svg" alt="">
+                <img class="left sr-icons" src="./asset/images/icon-cat.svg" alt="">
+            </div>
+        </div>
+
+        <div class="container-row">
+            <div class="container-left">
+                <h2 class="titre-nature">Nature</h2>
+                <img class="img_nature1 sr-imageleft" src="./asset/images/nature1-pinterest.jpg" alt="">
+                <img class="img_nature3 sr-imagetop" src="./asset/images/nature3-agence.jpg" alt="">
+            </div>
+            <div class="container-right reverse">
+                <p class="lettrine">La végétation qui nous entoure nous offre un cadre de travail exceptionnel. Elle s’invite chez nous à travers le bois et les plantes.</p>
+                <img class="img_nature2 shadow sr-imageright" src="./asset/images/nature2-pinterest.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container-row reverse">
+            <div class="container-left">
+                <img class="img_art1 left sr-imageleft" src="./asset/images/art1-pinterest.jpg" alt="">
+                <img class="img_art2 shadow sr-imagebottom" src="./asset/images/art2-pinterest.jpg" alt="">
+                <p class="lettrine">Nous voulons stimuler notre créativité grâce à l’art, par des œuvres qui nous ressemblent etnous inspirent au quotidien.</p>
+            </div>
+            <div class="container-right">
+                <h2 class="titre-art">Art</h2>
+                <img class="img_art3 sr-imageright" src="./asset/images/art3-pinterest.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container-row">
+            <div class="container-left">
+                <h2 class="titre-convivialite">Convi—<br/>vialité</h2>
+                <img class="img_convivialite1 sr-imageleft" src="./asset/images/convivialite1-pinterest.jpg" alt="">
+            </div>
+            <div class="container-right">
+                <img class="img_convivialite2 shadow sr-imagetop" src="./asset/images/convivialite2-pinterest.jpg" alt="">
+                <img class="img_convivialite3 right sr-imageright" src="./asset/images/convivialite3-agence.jpg" alt="">
+                <p class="lettrine">Véritable lieu de vie, l’agence se veut un espace d’échanges agréable entre ses talents et sesclients où il fait bon de travailler et se détendre.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-white">
+        <div class="container center">
+            <p><b>Retrouvez nos idées et créations sur Pinterest</b></p>
+            <img class="icon_pinterest" src="./asset/images/pinterest-icon.svg" alt="">
+            <a href="http://pinterest.com/agencepurjus" target="_blank">pinterest.com/agencepurjus</a>
+        </div>
+    </div>
+
+    <div class="container-redimension" id="redimension">
+        <h1 class="titre-redimension">redimension</h1>
+        <img class="sr-unzoom" src="./asset/images/illustration-travaux.png" alt="">
+        <div class="container">
+            <div class="container-data-redimension sr-default">
+                    <div class="data-redimension">
+                        <h1 class="numscroller" data-min="0" data-max="160" data-delay="2" data-increment="1">160</h1>
+                        <h6>mètres²</h6>
+                        <span class="data-circle"></span>
+                    </div>
+                    <div class="data-redimension">
+                        <h1 class="numscroller" data-min="0" data-max="2" data-delay="1" data-increment="1">2</h1>
+                        <h6>Étages</h6>
+                        <span class="data-circle"></span>
+                    </div>
+                    <div class="data-redimension">
+                        <h1 class="numscroller" data-min="0" data-max="1" data-delay="1" data-increment="1">1</h1>
+                        <h6>Piscine</h6>
+                        <span class="data-circle"></span>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="container" id="recrutement">
+        <div class="container-recrutement">
+            <h2 class="on-recrute white">ON RE—<br/>CRUTE</h2>
+            <div class="fiche-recrutement shadow sr-imagetop">
+                <img class="fiche-profile" src="./asset/images/profile1.png" alt="">
+                <h5>Dev Web Front-End<br/>
+                VueJS/AngularJR (H/F)</h5>
+                <a href="https://remixjobs.com/emploi/Dev-Web-Front-End-VueJS-AngularJS-H-F-/40206"><div class="button-recrutement">
+                    Postuler <img src="./asset/images/arrow-white.svg" alt="">
+                </div></a>
+            </div>
+            <div class="fiche-recrutement shadow sr-imagebottom">
+                <img class="fiche-profile" src="./asset/images/profile2.png" alt="">
+                <h5>Dev Web Back-End (H/F)<br/><br/></h5>
+                <a href="https://remixjobs.com/emploi/Dev-Web-Front-End-VueJS-AngularJS-H-F-/40206"><div class="button-recrutement">
+                    Postuler <img src="./asset/images/arrow-white.svg" alt="">
+                </div></a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <img class="header-logo" src="./asset/images/purjus_logo2.svg" alt="">
+        <div class="footer_social">
+            <a href="https://www.facebook.com/purjuscommunication/" target="_blank"><img src="./asset/images/icon_facebook.svg" alt=""></a>
+            <a href="https://fr.linkedin.com/company/purjus-communication" target="_blank"><img src="./asset/images/icon_linkedin.svg" alt=""></a>
+            <a href="https://www.youtube.com/channel/UC-Jw1vHCN2xiTbMgREhkvRg" target="_blank"><img src="./asset/images/icon_youtube.svg" alt=""></a>
+        </div>
+    </footer>
+
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <script type="text/javascript">
+        window.sr = ScrollReveal();
+        sr.reveal('.sr-default');
+        sr.reveal('.sr-icons', { origin: 'bottom', delay: 300, duration: 500, reset: false });
+        sr.reveal('.sr-imageright', { origin: 'right', delay: 300, duration: 500, scale: 0, distance: '50%', reset: true });
+        sr.reveal('.sr-imageleft', { origin: 'left', delay: 300, duration: 500, scale: 0, distance: '50%', reset: true });
+        sr.reveal('.sr-imagebottom', { origin: 'bottom', delay: 300, duration: 500, scale: 0, distance: '50%', reset: true });
+        sr.reveal('.sr-imagetop', { origin: 'top', delay: 300, duration: 500, scale: 0, distance: '50%', reset: true });
+        sr.reveal('.sr-zoom', { origin: 'top', delay: 300, duration: 500, scale: 0.5, distance: '0', reset: false });
+        sr.reveal('.sr-unzoom', { origin: 'top', delay: 300, duration: 500, scale: 1.5, distance: '0', reset: false });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,1013 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    width: 100%;
+    min-height: 320px;
+    min-width: 460px;
+    background: #DCDCDC;
+    color: #1A1A1A;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+}
+
+.frame-top {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 40px;
+    background: white;
+
+    z-index: 20;
+}
+
+.frame-bottom {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    background: white;
+
+    z-index: 20;
+}
+
+.frame-left {
+    position: fixed;
+    left: 0px;
+    height: 100%;
+    width: 40px;
+    background: white;
+
+    z-index: 20;
+}
+
+.frame-right {
+    position: fixed;
+    right: 0px;
+    height: 100%;
+    width: 40px;
+    background: white;
+
+    z-index: 20;
+}
+
+.button-back {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: auto;
+    height: auto;
+    padding: 30px;
+    background-color: white;
+    z-index: 30;
+}
+
+.button-back img {
+    transform: rotate(180deg);
+    margin-right: 20px;
+    display: inline;
+    margin-bottom: -2px;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.button-back:hover img{
+    margin-right: 30px;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.button-purjus-recrute {
+    position: fixed;
+    bottom: 30px;
+    left: 80px;
+    z-index: 30;
+    font-weight: 700;
+}
+
+.button-purjus-site {
+    position: fixed;
+    bottom: 130px;
+    right: -15px;
+    z-index: 30;
+    font-weight: 700;
+
+    transform: rotate(270deg);
+}
+
+.button-nav {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    z-index: 30;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.button-nav:hover {
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+header {
+    min-width: 100%;
+
+    background-image: url(../asset/images/background_header.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+header .header-logo {
+    margin-top: 120px;
+    margin-bottom: 60px;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+header .header-title {
+    margin-top: 60px;
+    margin-bottom: 180px;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+
+.header-arrow {
+    width: 80px;
+    height: 80px;
+    background: white;
+    transform: rotate(45deg);
+    margin-top: -40px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    padding: 0px 80px 0px 80px;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.intro {
+    max-width: 540px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 180px;
+    padding-bottom: 60px;
+}
+
+.intro p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+.travaux {
+    display: flex;
+    flex-direction: row;
+    height: 640px;
+
+    padding-top: 120px;
+    margin-bottom: 60px;
+}
+
+.travaux-timeline {
+    flex: 0;
+    padding-left: 20px;
+    padding-right: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.travaux-timeline img {
+    position: absolute;
+}
+
+.travaux-date {
+    margin-left: 60px;
+}
+
+.travaux-timer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.travaux-countdown {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.counter {
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img_countdown {
+    width: 65%;
+}
+
+.recadrage {
+    display: flex;
+    height: 360px;
+
+    margin-bottom: 90px;
+    padding-top: 120px;
+}
+
+.recadrage-left {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+.recadrage-center {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.recadrage-right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 40px;
+}
+
+.recadrage-frame {
+    width: 67%;
+    height: 200px;
+    margin-top: -180px;
+    border: 8px solid white;
+    margin-left: auto;
+    margin-right: 25px;
+
+    z-index: -1;
+}
+
+.recadrage-center p {
+    margin-left: 160px;
+}
+
+.container-row {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+    margin: 20px;
+
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.container-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    margin: 20px;
+
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.titre-nature {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: -35px;
+    margin-right: 40px;
+    z-index: 10;
+}
+
+.img_nature1 {
+    width: 50%;
+}
+
+.img_nature2 {
+    width: 50%;
+}
+
+.img_nature3 {
+    margin-right: -20%;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.titre-art {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: -35px;
+    margin-left: 40px;
+    z-index: 10;
+}
+
+.img_art1 {
+    width: 70%;
+}
+
+.img_art2 {
+    margin-top: -30%;
+    width: 45%;
+}
+
+.img_art3 {
+    width: 100%;
+}
+
+.titre-convivialite {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: -35px;
+    margin-right: 40px;
+    z-index: 10;
+}
+
+.img_convivialite1 {
+    width: 100%;
+}
+
+.img_convivialite2 {
+    width: 45%;
+    margin-top: -80px;
+}
+
+.img_convivialite3 {
+    width: 70%;
+    margin-top: -30%;
+}
+
+.container-white {
+    flex: 1;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: white;
+}
+
+.icon_pinterest {
+    margin-top: 20px;
+    margin-bottom: -10px;
+    margin-right: 10px;
+}
+
+.container-redimension {
+    padding-top: 120px;
+}
+
+.titre-redimension {
+    margin-top: 8%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+
+    width: 100%;
+}
+
+.container-redimension img {
+    width: 100%;
+    margin-top: -16%;
+}
+
+.container-data-redimension {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 80px;
+}
+
+.data-redimension {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    min-width: 180px;
+}
+
+.data-redimension h2 {
+    margin-bottom: 15px;
+    z-index: 10;
+}
+
+.data-circle {
+    background: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: -80px;
+    z-index: -10;
+}
+
+.container-recrutement {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 120px;
+    padding-top: 180px;
+}
+
+.on-recrute {
+    text-align: right;
+
+    margin: auto;
+}
+
+.fiche-recrutement {
+    width: 28%;
+    height: auto;
+    margin: 20px;
+    background-color: white;
+    text-align: center;
+    align-items: flex-end;
+}
+
+.fiche-profile {
+    margin-top: -80px;
+    border: 10px solid white;
+    border-radius: 50%;
+    width: 120px;
+}
+
+.fiche-recrutement H5 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.button-recrutement {
+    padding: 30px;
+    background: #1A1A1A;
+    color: white;
+    margin-left: auto;
+    width: 50%;
+    line-height: 10px;
+}
+
+.button-recrutement img {
+    margin-left: 10px;
+    display: inline;
+    margin-bottom: -2px;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.button-recrutement:hover img {
+    margin-left: 20px;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+footer {
+    min-width: 100%;
+    min-height: 360px;
+    background-image: url(../asset/images/background_header.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_social img {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 15px;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.footer_social img:hover {
+    padding-bottom: 20px;
+    margin-top: -20px;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+a {
+    color: #1A1A1A;
+    text-decoration: none;
+}
+
+b {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+h1 {
+    font-size: 6.2em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 4.5em;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+h3 {
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 0.8em;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.right {
+    align-self: flex-end;
+}
+
+.left {
+    align-self: flex-start;
+}
+
+.center {
+    align-self: center;
+    text-align: center;
+}
+
+.white {
+    color: white;
+}
+
+.shadow {
+    box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.25);
+    z-index: 10;
+}
+
+.rotation {
+    transform: rotate(270deg);
+}
+
+.lettrine:first-of-type:first-letter {
+    font-size: 8.75em;
+    font-weight: 500;
+    float: left;
+    margin-top: -60px;
+    height: 20px;
+    line-height: 0.70em;
+    margin-left: -10px;
+    margin-right: 5px;
+}
+
+.lettrine {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media screen and (max-width: 1141px){
+
+    .travaux {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 120px;
+    }
+
+    .travaux-timeline {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 90px;
+        padding: 0;
+    }
+
+    .travaux-timeline img {
+        display: none;
+    }
+
+    .travaux-date {
+        flex: 1;
+        margin: 20px;
+        min-width: 150px;
+    }
+
+    .travaux-countdown {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .counter {
+        margin-top: 20px;
+        min-width: 140px;
+    }
+
+    .recadrage {
+        flex-direction: column;
+        height: 580px;
+
+        margin-bottom: 60px;
+    }
+
+    .recadrage-left {
+        flex-direction: row;
+        padding-right: 10%;
+        margin-bottom: -5%;
+    }
+
+    .recadrage-center {
+        text-align: center;
+    }
+
+    .recadrage-right {
+        flex-direction: row;
+        padding-left: 10%;
+        margin-top: -5%;
+    }
+
+    .recadrage-frame {
+        width: 50%;
+        height: 160px;
+        margin-top: -140px;
+        border: 8px solid white;
+        margin-left: auto;
+        margin-right: auto;
+
+        z-index: -1;
+    }
+
+    .recadrage-center p {
+        margin-left: 0px;
+        margin-right: 40px;
+    }
+
+    .lettrine:first-of-type:first-letter {
+        font-size: 4.5em;
+        margin-top: -10px;
+        height: 20px;
+        line-height: 0.70em;
+        margin-left: -4px;
+        margin-right: 3px;
+    }
+
+    .lettrine {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .titre-nature {
+        margin-bottom: -25px;
+        margin-right: -20px;
+    }
+
+    .img_nature1 {
+        width: 80%;
+    }
+
+    .img_nature2 {
+        width: 80%;
+    }
+
+    .img_nature3 {
+        margin-right: -60px;
+        margin-top: 40px;
+        width: 130%;
+    }
+
+    .titre-art {
+        margin-bottom: -25px;
+    }
+
+    .img_art1 {
+        width: 80%;
+    }
+
+    .img_art2 {
+        width: 60%;
+    }
+
+    .img_art3 {
+        width: 120%;
+    }
+
+    .titre-convivialite {
+        margin-bottom: -25px;
+        margin-right: -60px;
+        align-self: flex-start;
+    }
+
+    .img_convivialite1 {
+        width: 120%;
+    }
+
+    .img_convivialite2 {
+        width: 60%;
+    }
+
+    .img_convivialite3 {
+        width: 80%;
+        margin-top: -10%;
+    }
+
+    .container-recrutement {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fiche-recrutement {
+        margin-top: 120px;
+        min-width: 280px;
+    }
+
+    h1 {
+        font-size: 5em;
+    }
+
+    h2 {
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width: 1140px) and (max-width: 769px){
+
+    .img_countdown {
+        width: 100%;
+    }
+
+    .container-row {
+        flex-direction: column;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .lettrine:first-of-type:first-letter {
+        margin-top: -15px;
+    }
+
+    .titre-nature {
+        align-self: flex-start;
+    }
+
+    .img_nature1 {
+        width: 60%;
+        margin-right: 10%;
+    }
+
+    .img_nature2 {
+        width: 60%;
+        margin-top: -40px;
+        margin-left: 10%;
+    }
+
+    .img_nature3 {
+        margin-right: 0px;
+        margin-top: -60px;
+        margin-bottom: -120px;
+        width: 100%;
+    }
+
+    .titre-art {
+        margin-bottom: -25px;
+    }
+
+    .img_art1 {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .img_art2 {
+        width: 50%;
+    }
+
+    .img_art3 {
+        width: 100%;
+        margin-bottom: -160px;
+        z-index: -10;
+    }
+
+    .titre-convivialite {
+        margin-right: 10px;
+    }
+
+    .img_convivialite1 {
+        width: 100%;
+        margin-bottom: -80px;
+    }
+
+    .img_convivialite2 {
+        width: 60%;
+        margin-left: 10%;
+    }
+
+    .img_convivialite3 {
+        width: 80%;
+        margin-top: -10%;
+    }
+
+    .container-redimension img {
+        margin-bottom: -12%;
+    }
+
+    .titre-redimension {
+        font-size: 4em;
+    }
+
+    .container-data-redimension {
+        flex-direction: column;
+    }
+
+    .data-redimension {
+        margin-top: 40px;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 3.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+
+}
+
+
+
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 50; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgba(255,255,255,0.85); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.3s; /* 0.3 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    margin-left: 190px;
+    margin-right: 190px;
+    text-align: left;
+    min-width: 480px;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    font-size: 0.8em;
+    text-decoration: none;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+    display: inline;
+}
+
+.overlay a:hover {
+    margin-left: 40px;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 40px;
+    right: 25px;
+    font-size: 3em;
+    text-align: center;
+
+    line-height: 0;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.overlay .closebtn:hover {
+    transform: rotate(90deg);
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-width: 960px), screen and (max-height: 450px){
+    .overlay a {
+        font-size: 0.6em;
+        line-height: 0.6em;
+    }
+    .overlay-content {
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+    .overlay .line {
+        margin-bottom: 10px;
+    }
+}
