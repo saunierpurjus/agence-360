@@ -24,36 +24,45 @@ a:link, a:visited {
 
     background: rgba(0,0,0,0.3);
     pointer-events : none;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body:active #principal {
+    opacity: 0.1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+    #principal {
+        opacity: 0.5;
+    }
 }
 
 #gauche {
     float:left;
-    background:rgba(204, 204, 204, 0);
-}
-
-h1 {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.5em;
-    line-height: 1.4;
 }
 
 #droite {
     float:right;
-    background:rgba(204, 204, 204, 0);
-    padding-bottom: 5px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.5em;
+    line-height: 1.4em;
 }
 
 p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
+    font-size: 1em;
     font-weight: 300;
     color: white;
-    line-height: 1.7;
+    line-height: 1.6em;
 }
 
 #footer {
@@ -142,6 +151,10 @@ p {
     -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
     visibility: hidden;
+}
+
+.menu ul {
+    padding-left: 0px;
 }
 
 .menu ul li {

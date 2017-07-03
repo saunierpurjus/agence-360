@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=no"/>
     <title>Purjus panorama video</title>
     <link href="//fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:light" rel="stylesheet">
@@ -125,19 +125,19 @@
     panel = document.querySelector('#panel');
 
 
-    panorama = new PANOLENS.VideoPanorama ( 'asset/textures/video/deuxieme-salle.mp4', { autoplay : true }, 2000 );
+    panorama = new PANOLENS.VideoPanorama ( 'asset/textures/video/deuxieme-salle.mp4', { autoplay : true, loop : true, muted : true, playsinline : true, crossOrigin : "anonymous" }, 2000 );
 
     infospot = new PANOLENS.Infospot( 150, PANOLENS.DataImage.InfoVideo2 );
     infospot.position.set( 1089.06, -78.67, 1670.53 );
     infospot.addEventListener( 'click', function(){ window.open('cuisine.html',"_self");} );
-    infospot.addHoverText('La cuisine')
+    infospot.addHoverText('Cuisine')
 
     //infospot video
 
     infospot2 = new PANOLENS.Infospot( 150, PANOLENS.DataImage.InfoVideo3 );
     infospot2.position.set(  994.94, 58.28, -1732.06 );
     infospot2.addEventListener( 'click', function(){ window.open('index.html',"_self");} );
-    infospot2.addHoverText('La salle principale')
+    infospot2.addHoverText('Open Space')
 
     //infospot2.onClick(45,67);
     //console.log(infospot2.onClick());
@@ -145,7 +145,7 @@
     infospot3 = new PANOLENS.Infospot( 150, PANOLENS.DataImage.Info );
     infospot3.position.set( 1542.59, 88.98, -1263.19 );
     infospot3.addEventListener( 'click', function(){ window.open('exterieur.html',"_self");} );
-    infospot3.addHoverText('Éxtérieur')
+    infospot3.addHoverText('Extérieur')
 
     //infospot3.onClick(45,67);
     //console.log(infospot2.onClick());

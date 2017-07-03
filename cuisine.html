@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=no"/>
     <title>Purjus panorama video</title>
     <link href="//fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:light" rel="stylesheet">
@@ -125,13 +125,13 @@
     panel = document.querySelector('#panel');
     venobox = document.getElementsByClassName('#venobox')
 
-    panorama = new PANOLENS.VideoPanorama ( 'asset/textures/video/cuisine.mp4', { autoplay : true }, 2000 );
+    panorama = new PANOLENS.VideoPanorama ( 'asset/textures/video/cuisine.mp4', { autoplay : true, loop : true, muted : true, playsinline : true, crossOrigin : "anonymous" }, 2000 );
 
 
     infospot = new PANOLENS.Infospot( 150, PANOLENS.DataImage.InfoVideo3 );
     infospot.position.set(1345.75, 63.06, -1475.30);
     infospot.addEventListener( 'click', function(){ window.open('deuxieme-salle.html',"_self");} );
-    infospot.addHoverText( 'La deuxieme salle');
+    infospot.addHoverText( 'Bureau');
 
 
     //infospot.onClick(45,67);
