@@ -124,7 +124,7 @@
     container = document.querySelector( '#container' );
     panel = document.querySelector('#panel');
 
-    panorama = new PANOLENS.VideoPanorama ( 'asset/textures/video/exterieur.mp4', { autoplay : true, loop : true, muted : true, playsinline : true, crossOrigin : "anonymous" }, 2000 );
+    panorama = new PANOLENS.VideoPanorama ( 'asset/textures/video/exterieur.mp4', { autoplay : true, loop : true, muted : true, playsinline : true }, 0 );
 
     infospot = new PANOLENS.Infospot( 150, PANOLENS.DataImage.Info );
     infospot.position.set(1978.74, -3.01, -273.34);

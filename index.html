@@ -12,12 +12,23 @@
     <!--LOADER-->
     <script src="./src/pace.js"></script>
 
+    <script>
+    paceOptions = {
+    ajax: true, // disabled
+    document: true, // disabled
+    eventLag: true, // disabled
+    elements: {
+    selectors: ['.my-page']
+    }
+    };
+    </script>
+
     <link href="//fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:light" rel="stylesheet">
     <link rel="stylesheet" href="extern/venobox/venobox.css" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js" ></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js" ></script>
+    <!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js" ></script>-->
+    <!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js" ></script>-->
     <script type="text/javascript" src="./build/script.js"></script>
 
 </head>
@@ -129,7 +140,7 @@
     video = document.querySelector('#video')
 
 
-    panorama = new PANOLENS.VideoPanorama ( 'asset/textures/video/salle-principale.mp4', { autoplay : true, loop : true, muted : true}, 2000 );
+    panorama = new PANOLENS.VideoPanorama ( 'asset/textures/video/salle-principale.mp4', { autoplay : true, loop : true, muted : true}, 0 );
 
     infospot = new PANOLENS.Infospot( 100, PANOLENS.DataImage.InfoVideo );
     infospot.position.set(-1860.45, -31.42, 722.03);
